@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 class MarvelRepository @Inject constructor(
-    @Named("MarvelApi")private val marvelApi: MarvelApi
+    private val marvelApi: MarvelApi
 ) : BaseRepository() {
 
     suspend fun getAllCharacters(orderBy: String): BaseResponse<List<MarvelCharacter>?> {
